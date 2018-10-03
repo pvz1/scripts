@@ -43,7 +43,7 @@ REPO_HOST=${STACKDRIVER_REPO_HOST:-repo.stackdriver.com}
 
 # Recent systems provide /etc/os-release. The ID variable defined therein
 # is particularly useful for identifying Amazon Linux.
-if [[ -f /etc/os-release ]]; then
+if [ -f /etc/os-release ]; then
   . /etc/os-release
 fi
 
@@ -102,10 +102,10 @@ install() {
       ;;
     *)
       # Fallback for systems lacking /etc/os-release.
-      if [[ -f /etc/debian_version ]]; then
+      if [ -f /etc/debian_version ]; then
         echo 'Installing agents for Debian.'
         install_for_debian
-      elif [[ -f /etc/redhat-release ]]; then
+      elif [ -f /etc/redhat-release ]; then
         echo 'Installing agents for Red Hat.'
         install_for_redhat
       else
