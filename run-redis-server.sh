@@ -1,5 +1,4 @@
 #!/bin/sh
-set -e
 
 redis-server /conf/redis.conf &
 
