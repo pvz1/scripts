@@ -115,11 +115,7 @@ install() {
   esac
 }
 
-main() {
-  redis-server /conf/redis.conf &
-
-  # TODO: Wait until redis-server process is ready
-  sleep 1
+main() {  
   if ! install; then
     echo >&2 'Installation failed.'
     exit 1
