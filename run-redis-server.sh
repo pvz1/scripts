@@ -26,4 +26,4 @@ apt-get -y -q install --allow-unauthenticated stackdriver-agent
 apt-get install libhiredis0.10
 (cd /opt/stackdriver/collectd/etc/collectd.d/ \
   && curl -O "https://raw.githubusercontent.com/Stackdriver/stackdriver-agent-service-configs/master/etc/collectd.d/redis.conf")
-sudo service stackdriver-agent restart  
+service stackdriver-agent restart  
