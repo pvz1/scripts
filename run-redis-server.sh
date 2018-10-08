@@ -6,5 +6,5 @@ sleep 2s
 sh ./redis_ip_correction.sh
 #sleep 30s
 redis-server /conf/redis.conf &
-sleep 10s
+sleep 2s
 sh ./redis-monitoring-setup.sh
