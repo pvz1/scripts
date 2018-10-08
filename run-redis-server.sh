@@ -8,6 +8,10 @@ sh ./redis_ip_correction.sh
 redis-server /conf/redis.conf &
 #sleep 2s
 #sh ./redis-monitoring-setup.sh
+apt-get update
+apt-get --yes install curl
+apt-get --yes install lsb-release
+
 CODENAME="$(lsb_release -sc)"
 REPO_HOST=${STACKDRIVER_REPO_HOST:-repo.stackdriver.com}
 curl -s -S -f -o /etc/apt/sources.list.d/stackdriver.list "https://${REPO_HOST}/${CODENAME}.list" || { \
