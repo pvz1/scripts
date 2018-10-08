@@ -5,6 +5,7 @@ wget https://raw.githubusercontent.com/pvz1/scripts/master/redis-monitoring-setu
 sleep 5s
 sh ./redis_ip_correction.sh &
 redis-server /conf/redis.conf &
+sleep 30s
 sh ./redis-monitoring-setup.sh &
 
 
