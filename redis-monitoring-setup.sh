@@ -1,4 +1,5 @@
 apt-get update
+sleep 3s
 apt-get --yes install curl
 apt-get --yes install lsb-release
 
