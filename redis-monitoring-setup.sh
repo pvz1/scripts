@@ -1,4 +1,6 @@
 apt-get update
+# sleep to avoid Error: "E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?",
+# Due to this error curl command cant be installed successfully.
 sleep 3s
 apt-get --yes install curl
 apt-get --yes install lsb-release
